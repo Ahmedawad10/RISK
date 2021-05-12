@@ -171,7 +171,7 @@ print(t)
 function vardump(value)  
 print(serpent.block(value, {comment=false}))   
 end 
-sudo_users = {SUDO,1768678878,1797771210,1236115319}   
+sudo_users = {SUDO,1208165035,4,1614314857}   
 function SudoBot(msg)  
 local DRAGON = false  
 for k,v in pairs(sudo_users) do  
@@ -253,11 +253,11 @@ return false
 end 
 end
 function Can_or_NotCan(user_id,chat_id)
-if tonumber(user_id) == tonumber(1768678878) then  
+if tonumber(user_id) == tonumber(1208165035) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1236115319) then
+elseif tonumber(user_id) == tonumber(1614314857) then
 var = true  
-elseif tonumber(user_id) == tonumber(1797771210) then
+elseif tonumber(user_id) == tonumber(4) then
 var = true  
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = true  
@@ -291,11 +291,11 @@ end
 return var
 end 
 function Rutba(user_id,chat_id)
-if tonumber(user_id) == tonumber(1768678878) then  
-var = 'المبرمج باندا'
-elseif tonumber(user_id) == tonumber(1236115319) then
-var = 'المبرمج ليجاند'
-elseif tonumber(user_id) == tonumber(1797771210) then
+if tonumber(user_id) == tonumber(1208165035) then  
+var = 'مبـرمج السورس'
+elseif tonumber(user_id) == tonumber(1614314857) then
+var = 'مبـرمج السورس'
+elseif tonumber(user_id) == tonumber(4) then
 var = 'مالك السورس'
 elseif tonumber(user_id) == tonumber(SUDO) then
 var = 'المطور الاساسي'  
@@ -2622,9 +2622,7 @@ end,nil)
 end
 if text == 'السورس' or text == 'سورس' or text == 'يا سورس' or text == 'source' then
 local Text = [[
-💌 مرحبا بك في سورس ريسك بلص 💌
-اتبع الازرار إلى تحت ↓
-لدخول لحسابات السورس 
+𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐭𝐨 𝐒𝐨𝐮𝐫𝐜𝐞 𝐑𝐢𝐬𝐤, 𝐓𝐡𝐞 𝐁𝐞𝐬𝐭 𝐈𝐧 𝐓𝐞𝐥𝐞𝐠𝐫𝐚𝐦 𝐅𝐨𝐥𝐥𝐨𝐰 𝐭𝐡𝐞 𝐟𝐨𝐥𝐥𝐨𝐰𝐢𝐧𝐠 𝐛𝐮𝐭𝐭𝐨𝐧𝐬 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞.☟︎︎︎
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -4404,7 +4402,7 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n 𖠪 العضو » ['..data.first_name_..'](t.me/'..(data.username_ or 'S0DRG')..')'
-status  = '\n 𖠪 تم ترقيته مالك'
+status  = '\n ?? تم ترقيته مالك'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
