@@ -15,7 +15,7 @@ keyboard.inline_keyboard = {
 {text = '⓵', callback_data="/help1"},{text = '⓶', callback_data="/help2"},
 },
 {
-{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊, url="t.me/NIU_C"},
+{text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊', url="t.me/NIU_C"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
