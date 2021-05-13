@@ -10790,7 +10790,7 @@ end
 end
 
 if text then 
-list = {'بكرهك}
+list = {'بكرهك'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
 send(msg.chat_id_,msg.id_, '[لا يلا انا ال بموت فيك 😏😏](t.me/NIU_C)')
