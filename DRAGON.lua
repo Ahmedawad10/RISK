@@ -137,13 +137,13 @@ end
 _redis = load_redis()  
 --------------------------------------------------------------------------------------------------------------
 print([[
-___     _     _  _   ___      _   
- | _ )   /_\   | \| | |   \    /_\  
- | _ \  / _ \  | .` | | |) |  / _ \ 
- |___/ /_/ \_\ |_|\_| |___/  /_/ \_\
+╔══╗╔╗─╔══╗╔══╗
+║╔╗║║║─║═╦╝║╔╗║
+║╠╣║║╚╗║╔╝─║╠╣║
+╚╝╚╝╚═╝╚╝──╚╝╚╝
  
 > CH › @NIU_C
-~> DEVELOPER › @de_vi_d 
+~> DEVELOPER › @AAHMEED11 
 ]])
 sudos = dofile("./VERA_Info.lua") 
 SUDO = tonumber(sudos.SUDO)
@@ -875,7 +875,7 @@ end
 if DevSoFi(msg) then
 local bl = ' ✤ اهلا عزيزي آلمـطـور\n ✤ آنت آلمـطـور آلآسـآسـي للبوت\n┉  ┉  ┉  ┉  ┉  ┉  ┉  ┉ء\n ✤ تسـتطـيع‌‏ آلتحگم باوامر البوت\n ✤ من خلاال الكيبورت خاص بك\n ✤ قناة سورس البوت [اضغط هنا](t.me/NIU_C)'
 local keyboard = {
-{'ديفيد مبرمج السورس'},
+{'ماديسون مبرمج السورس'},
 {'قناه السورس','بوت تواصل'},
 {'اضف رد عام','حذف رد عام'},
 {'اضف رد متعدد','حذف رد متعدد'},
@@ -1089,14 +1089,14 @@ if text == 'الاصدار ' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 send(msg.chat_id_, msg.id_,' ✤ اصدار سورس ريسك \n ✤ الاصدار ⤶{ v 7.0}')
 end
-if text == 'ديفيد مبرمج السورس' and DevSoFi(msg) then
+if text == 'ماديسون مبرمج السورس' and DevSoFi(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
-[DEV DEVID](t.me/de_vi_d)
+[⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎](t.me/AAHMEED11)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𖣘 ⁽ＤＥＶＩＤ₎ 𖣘', url="t.me/de_vi_d"}}, 
+{{text = '✪ ⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎ ✪', url="t.me/AAHMEED11"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -1120,7 +1120,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '⌯｟TＷＡＳＯＬ｠⌯', url="t.me/hX6bot"}}, 
+{{text = '𝑻𝒘𝒂𝒔𝒐𝒍.✫', url="t.me/hX6bot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2701,7 +2701,50 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
-
+--------7oda---
+if text == 'الالعاب' then
+if not Constructor(msg) then
+send(msg.chat_id_, msg.id_,' 𖢠 هاذا الامر خاص بالادمنيه\n 𖢠 ارسل {⑩} لعرض اوامر الاعضاء')
+return false
+end
+if AddChannel(msg.sender_user_id_) == false then
+local MRSoOoFi = database:get(bot_id.."AL:AddS0FI:stats") or "لم يتم التحديد"
+if NIU_C then
+send(msg.chat_id_, msg.id_,'['..NIU_C..']')
+else
+send(msg.chat_id_, msg.id_,' 𖢠 لا تستطيع استخدام البوت \n  𖢠 يرجى الاشتراك بالقناه اولا \n  𖢠 اشترك هنا ['..database:get(bot_id..'add:ch:username')..']')
+end
+return false
+end
+local Text =[[
+💌مرحب بيك في الالعاب💌
+ اتبع الازرار إلى تحت في الاسفل ↓
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+[ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊 ](t.me/NIU_C)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'العاب السورس🎮', callback_data="/mut-name"},
+},
+{
+{text = 'العاب متطوره🕹️', callback_data="/soff"},
+},
+{
+{text = 'العاب متطوره 2🕹️', callback_data="/change-phott"},
+},
+{ 
+{text = 'الاوامر🎯', callback_data="/help9"},
+},
+{
+{text = '<｟ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐑𝐢𝐬𝐤 ｠ <', url="t.me/NIU_C"},
+},
+}
+local msg_id = msg.id_/2097152/0.5
+https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
+return false
+end
+-----
 if text == 'مين نصبلك' or text == 'عايزه بوت' or text == 'عايز بوت' then
 local Text = [[
 لتنصيب بوت مجاني ع سورس الفا اتبع الازرار♡
@@ -2723,7 +2766,7 @@ local Text = [[
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '𖣘 ⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎ 𖣘',url="t.me/AAHMEED11"}},
+{{text = '✪ ⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎ ✪',url="t.me/AAHMEED11"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -2838,7 +2881,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𖣘 ⁽SＯＵＲＣＥ₎ 𖣘', url="t.me/NIU_C"}}, 
+{{text = '𝐒𝐨𝐮𝐫𝐜𝐞.༆', url="t.me/NIU_C"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2849,7 +2892,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '⌯｟TＷＡＳＯＬ｠⌯', url="t.me/hX6bot"}}, 
+{{text = '𝑻𝒘𝒂𝒔𝒐𝒍.✫', url="t.me/hX6bot"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -2861,7 +2904,7 @@ local Text = [[
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
-{{text = '𖣘 ⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎ 𖣘', url="t.me/AAHMEED11"}}, 
+{{text = '✪ ⁽𝐃𝐞𝐯 𝐌𝐚𝐝𝐢𝐬𝐨𝐧₎ ✪', url="t.me/AAHMEED11"}}, 
 } 
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
@@ -10647,7 +10690,7 @@ return false
 end
 
 if text == 'هاي' or text == 'هيي' then
-send(msg.chat_id_,msg.id_, '[علي الواي فاي..😺💜](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[ضيف جهاتك يرحي 🥺♥](t.me/NIU_C)') 
 return false
 end
 
@@ -10655,7 +10698,7 @@ if text then
 list = {'برايفت'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم برايفت والنبي..🥺💜](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[خدوني معاكو 🥺🧡](t.me/NIU_C)') 
 return false
 end
 end
@@ -10720,17 +10763,17 @@ if text then
 list = {'بف'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم بف..🙄💔](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[خدوني معاكو 🥺🧡](t.me/NIU_C)') 
 return false
 end
 end
 end
 
 if text then 
-list = {'😔'}
+list = {'🙂'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[متزعلش بحبك..😥♥️](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[هتنكد صح 🙂](t.me/NIU_C)') 
 return false
 end
 end
@@ -10740,17 +10783,17 @@ if text then
 list = {'بحبك'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[وانا كمان بحبك .🥺❤️](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[يتي اكتر 🙈♥](t.me/NIU_C)') 
 return false
 end
 end
 end
 
 if text then 
-list = {'بيف'}
+list = {'بكرهك}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[خدوني معاكم بيف ..🙄💔](t.me/NIU_C)')
+send(msg.chat_id_,msg.id_, '[لا يلا انا ال بموت فيك 😏😏](t.me/NIU_C)')
 return false
 end
 end
@@ -10759,7 +10802,7 @@ if text then
 list = {'سلام عليكم'}
 for k,v in pairs(list) do
 if string.find(text,v) ~= nil then
-send(msg.chat_id_,msg.id_, '[وعليكم السلام ..🖤🌚](t.me/NIU_C)') 
+send(msg.chat_id_,msg.id_, '[وعليكم السلام♥](t.me/NIU_C)') 
 return false
 end
 end
@@ -10952,7 +10995,7 @@ Text = ' ✤ هوا ابن الكلب دا الي ضافك😹⤶ '..Name
 sendText(msg.chat_id_,Text,msg.id_/2097152/0.5,'md')
 end,nil)
 else
-send(msg.chat_id_, msg.id_,' ✤ انت دخلت عبر الرابط يوسخ 🌝') 
+send(msg.chat_id_, msg.id_,' ✤ انت دخلت عبر الرابط هنهزر ولا اي🙂😂') 
 end
 end,nil)
 else
@@ -12184,7 +12227,7 @@ Msᴀɢ ~ #msgs
 [[
 ➭- 𝒔𝒕𝒂𓂅 #stast 𓍯. 💕
 ➮- 𝒖𝒔𝒆𝒓𓂅 #username 𓍯. 💕
-➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. 💕
+➭- 𝒎𝒔𝒈𝒆𓂅 #msgs 𓍯. ??
 ➭- 𝒊𝒅 𓂅 #id 𓍯. 💕
 ➭- 𝗖𝗛 - @NIU_C 🦅
 ]],
@@ -12824,9 +12867,9 @@ end
 return false
 end
 local Text =[[
-اتبع الازرار تحت ⇣
-واستمتع للأوامر 🕹️
-↳[𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐑𝐢𝐬𝐤](t.me/NIU_C)↲
+اوامر البوت اتبع الازرار بالاسفل.⬇️
+
+اشترك بقناه السورس وتابع جديدنا✅↳[𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐑𝐢𝐬𝐤](t.me/NIU_C)↲
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -13591,8 +13634,8 @@ https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callb
 return false
 end
 local Teext =[[
-اتبع الازرار تحت ⇣
-واستمتع للأوامر 🕹️
+اوامر البوت اتبع الازرار بالاسفل.⬇️
+اشترك بقناه السورس وتابع جديدنا✅
 ↲[𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐑𝐢𝐬𝐤](t.me/NIU_C)↲
 ]]
 keyboard = {} 
@@ -13765,6 +13808,212 @@ keyboard.inline_keyboard = {
 },
 {
 {text = '𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊', url="t.me/NIU_C"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+-----7oda---
+if Text == '/mut-name' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+✯أنت الآن في العاب السورس✯
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+✯اوامر الالعاب كتالي 
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+ ✯تفعيل الالعاب • لتفعيل العبه ° 
+ ✯تعطيل الالعاب • لتعطيل العبه °
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+ ✯الالعاب الخاصه بسورس 
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+ ✯لعبه البات ~⪼ لعبة المحيبس 
+ ✯لعبه التخمين ~⪼ لعبة البحث
+ ✯لعبه الاسرع ~⪼ لعبة اسرع شخص
+ ✯لعبه السمايلات ~⪼ لعبة المطابقه 
+ ✯لعبه المختلف ~⪼ لعبة الذكاء
+ ✯لعبه الرياضيات ~⪼ لعبة الارقام
+ ✯لعبه الانكليزي ~⪼ لعبة ترجمه
+ ✯لعبه الامثله ~⪼ لعبة تصحيح 
+ ✯لعبه العكس ~⪼ لعبة عكس الكلمات
+ ✯لعبه الحزوره ~⪼لعبة التفكير 
+ ✯لعبه المعاني ~⪼ العبه الشهيره 
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'Back♠️', callback_data="/tdd"},
+},
+{
+{text = '𝚂𝙾𝚄𝚁𝙲𝙴 𝚁𝙸𝚂𝙺', url="t.me/NIU_C"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/soff' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+💌اهلا في قائمه الالعاب المتطوره سورس ريسك 💌
+تفضل اختر لعبه من القائمه 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'فلابي بيرد', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'تحداني فالرياضيات',url="https://t.me/gamebot?game=MathBattle"}},   
+{{text = 'لعبه دراجات', url="https://t.me/gamee?game=MotoFX"},{text = 'سباق سيارات', url="https://t.me/gamee?game=F1Racer"}}, 
+{{text = 'تشابه', url="https://t.me/gamee?game=DiamondRows"},{text = 'كره القدم', url="https://t.me/gamee?game=FootballStar"}}, 
+{{text = 'ورق', url="https://t.me/gamee?game=Hexonix"},{text = 'لعبه 2048', url="https://t.me/awesomebot?game=g2048"}}, 
+{{text = 'SQUARES', url="https://t.me/gamee?game=Squares"},{text = 'ATOMIC', url="https://t.me/gamee?game=AtomicDrop1"}}, 
+{{text = 'CORSAIRS', url="https://t.me/gamebot?game=Corsairs"},{text = 'LumberJack', url="https://t.me/gamebot?game=LumberJack"}}, 
+{{text = 'LittlePlane', url="https://t.me/gamee?game=LittlePlane"},{text = 'RollerDisco', url="https://t.me/gamee?game=RollerDisco"}},  
+{{text = 'كره القدم 2', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'جمع المياه', url="https://t.me/gamee?game=BlockBuster"}},  
+{{text = 'لا تجعلها تسقط', url="https://t.me/gamee?game=Touchdown"},{text = 'GravityNinja', url="https://t.me/gamee?game=GravityNinjaEmeraldCity"}},  
+{{text = 'Astrocat', url="https://t.me/gamee?game=Astrocat"},{text = 'Skipper', url="https://t.me/gamee?game=Skipper"}},  
+{{text = 'WorldCup', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'GeometryRun', url="https://t.me/gamee?game=GeometryRun"}},  
+{{text = 'Ten2One', url="https://t.me/gamee?game=Ten2One"},{text = 'NeonBlast2', url="https://t.me/gamee?game=NeonBlast2"}},  
+{{text = 'Paintio', url="https://t.me/gamee?game=Paintio"},{text = 'onetwothree', url="https://t.me/gamee?game=onetwothree"}},  
+{{text = 'BrickStacker', url="https://t.me/gamee?game=BrickStacker"},{text = 'StairMaster3D', url="https://t.me/gamee?game=StairMaster3D"}},  
+{{text = 'LoadTheVan', url="https://t.me/gamee?game=LoadTheVan"},{text = 'BasketBoyRush', url="https://t.me/gamee?game=BasketBoyRush"}},  
+{{text = 'GravityNinja21', url="https://t.me/gamee?game=GravityNinja21"},{text = 'MarsRover', url="https://t.me/gamee?game=MarsRover"}},  
+{{text = 'LoadTheVan', url="https://t.me/gamee?game=LoadTheVan"},{text = 'GroovySki', url="https://t.me/gamee?game=GroovySki"}},  
+{{text = 'PaintioTeams', url="https://t.me/gamee?game=PaintioTeams"},{text = 'KeepItUp', url="https://t.me/gamee?game=KeepItUp"}},  
+{{text = 'SunshineSolitaire', url="https://t.me/gamee?game=SunshineSolitaire"},{text = 'Qubo', url="https://t.me/gamee?game=Qubo"}},  
+{{text = 'PenaltyShooter2', url="https://t.me/gamee?game=PenaltyShooter2"},{text = 'Getaway', url="https://t.me/gamee?game=Getaway"}},  
+{{text = 'PaintioTeams', url="https://t.me/gamee?game=PaintioTeams"},{text = 'SpikyFish2', url="https://t.me/gamee?game=SpikyFish2"}},  
+{{text = 'GroovySki', url="https://t.me/gamee?game=GroovySki"},{text = 'KungFuInc', url="https://t.me/gamee?game=KungFuInc"}},  
+{{text = 'SpaceTraveler', url="https://t.me/gamee?game=SpaceTraveler"},{text = 'RedAndBlue', url="https://t.me/gamee?game=RedAndBlue"}},  
+{{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
+{{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
+{{text = ' <｟SＯＵＲＣＥ💌｠ <', url="t.me/NIU_C"}},
+{{text = 'Back♠️', callback_data="/add"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/change-names' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+انت الان في قائمة تنبيه الاسماء
+*✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪*
+الاوامر الخاصة فـي تنبيه الاسماء 
+تفعيل تنبيه الاسماء
+تعطيل تنبيه الاسماء
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'كتم الاسماء', callback_data="/mute-name"},{text = 'التوحيد', callback_data="/sofi"},{text = 'تنبيه الأسماء', callback_data="/change-names"},
+},
+{
+{text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
+},
+{
+{text = '🔙 القائمة الرئيسيه 🔙', callback_data="/add"},
+},
+{
+{text = '𝐃𝐑𝐀𝐆𝐎𝐍 𝐂𝐇𝐀𝐍𝐍𝐄𝐋', url="t.me/NIU_C"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/change-id' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+انت الان في قائمة تنبيه المعرف
+*✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪*
+الاوامر الخاصة فـي تنبيه المعرف
+تفعيل تنبيه المعرف
+تعطيل تنبيه المعرف
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'كتم الاسماء', callback_data="/mute-name"},{text = 'التوحيد', callback_data="/sofi"},{text = 'تنبيه الأسماء', callback_data="/change-names"},
+},
+{
+{text = 'تنبيه المعرف', callback_data="/change-id"},{text = 'تنبيه الصور', callback_data="/change-photo"},
+},
+{
+{text = '🔙 القائمة الرئيسيه ??', callback_data="/add"},
+},
+{
+{text = '𝐃𝐑𝐀𝐆𝐎𝐍 𝐂??𝐀𝐍𝐍𝐄𝐋', url="t.me/NIU_C"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+if Text == '/change-photo' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+💌اهلا في قائمه2 الالعاب المتطوره سورس ريسك 💌
+تفضل اختر لعبه من القائمه 
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = 'فلابي بيرد', url="https://t.me/awesomebot?game=FlappyBird"},{text = 'تحداني فالرياضيات',url="https://t.me/gamebot?game=MathBattle"}},   
+{{text = 'لعبه دراجات', url="https://t.me/gamee?game=MotoFX"},{text = 'سباق سيارات', url="https://t.me/gamee?game=F1Racer"}}, 
+{{text = 'تشابه', url="https://t.me/gamee?game=DiamondRows"},{text = 'كره القدم', url="https://t.me/gamee?game=FootballStar"}}, 
+{{text = 'ورق', url="https://t.me/gamee?game=Hexonix"},{text = 'لعبه 2048', url="https://t.me/awesomebot?game=g2048"}}, 
+{{text = 'SQUARES', url="https://t.me/gamee?game=Squares"},{text = 'ATOMIC', url="https://t.me/gamee?game=AtomicDrop1"}}, 
+{{text = 'CORSAIRS', url="https://t.me/gamebot?game=Corsairs"},{text = 'LumberJack', url="https://t.me/gamebot?game=LumberJack"}}, 
+{{text = 'LittlePlane', url="https://t.me/gamee?game=LittlePlane"},{text = 'RollerDisco', url="https://t.me/gamee?game=RollerDisco"}},  
+{{text = 'كره القدم 2', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'جمع المياه', url="https://t.me/gamee?game=BlockBuster"}},  
+{{text = 'لا تجعلها تسقط', url="https://t.me/gamee?game=Touchdown"},{text = 'GravityNinja', url="https://t.me/gamee?game=GravityNinjaEmeraldCity"}},  
+{{text = 'Astrocat', url="https://t.me/gamee?game=Astrocat"},{text = 'Skipper', url="https://t.me/gamee?game=Skipper"}},  
+{{text = 'WorldCup', url="https://t.me/gamee?game=PocketWorldCup"},{text = 'GeometryRun', url="https://t.me/gamee?game=GeometryRun"}},  
+{{text = 'Ten2One', url="https://t.me/gamee?game=Ten2One"},{text = 'NeonBlast2', url="https://t.me/gamee?game=NeonBlast2"}},
+{{text = ' <｟SＯＵＲＣＥ💌｠ <', url="t.me/NIU_C"}},
+{{text = 'Back♠️', callback_data="/tdd"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+--- callback added
+if Text == '/tdd' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+💌مرحب بيك في الالعاب💌
+ اتبع الازرار إلى تحت في الاسفل ↓
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+[ 𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊 ](t.me/NIU_C)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'العاب السورس🎮', callback_data="/mut-name"},
+},
+{
+{text = 'العاب متطوره🕹️', callback_data="/soff"},
+},
+{
+{text = 'العاب متطوره 2🕹️', callback_data="/change-phott"},
+},
+{  
+{text = 'الاوامر🎯', callback_data="/help90"},
+},
+{
+{text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝚁𝙸𝚂𝙺', url="t.me/NIU_C"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
