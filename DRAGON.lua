@@ -13892,7 +13892,7 @@ keyboard.inline_keyboard = {
 {{text = 'SkodaHockey1 ', url="https://t.me/gamee?game=SkodaHockey1"},{text = 'SummerLove', url="https://t.me/gamee?game=SummerLove"}},  
 {{text = 'SmartUpShark', url="https://t.me/gamee?game=SmartUpShark"},{text = 'SpikyFish3', url="https://t.me/gamee?game=SpikyFish3"}},  
 {{text = ' <｟SＯＵＲＣＥ💌｠ <', url="t.me/NIU_C"}},
-{{text = 'Back♠️', callback_data="/add"}},
+{{text = 'Back♠️', callback_data="/tdd"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
@@ -14007,13 +14007,76 @@ keyboard.inline_keyboard = {
 {text = 'العاب متطوره🕹️', callback_data="/soff"},
 },
 {
-{text = 'العاب متطوره 2🕹️', callback_data="/change-phott"},
+{text = 'ممميزات', callback_data="/change-phott"},
 },
 {  
 {text = 'الاوامر🎯', callback_data="/help90"},
 },
 {
 {text = ' 𝚂𝙾𝚄𝚁𝙲𝙴 𝚁𝙸𝚂𝙺', url="t.me/NIU_C"},
+},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+------7oda
+if Text == '/change-phott' then
+if not Constructor(data) then
+local notText = '🚫 عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+✪ بك في مميزات سورس ريسك
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+✪ مميزات الخاصه بسورس ريسك
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+كت تويت ⇜ تويت 
+انصحني ⇜ انصحنى⇜انصح 
+الصراحه ⇜ صراحه 
+كتبات ⇜قصيده ⇜حكمه
+رزله⇜هينه⇜هيني⇜رزلي
+بتكره دا⇜بتحبو⇜بتحب دا
+تفعيل غنيلي ⇜غنيلي
+بوسي⇜بوسه⇜مصي⇜مصه
+تفعيل الاله حاسبه ⇜احسب+ الرقم
+✪❯─────「𝗥𝗶𝘀𝗸」─────❮✪
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{{text = ' <｟SＯＵＲＣＥ💌｠ <', url="t.me/NIU_C"}},
+{{text = 'Back♠️', callback_data="/add"}},
+}
+return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end
+------7oda
+if Text == '/help90' then
+if not Sudo(data) then
+local notText = '❌ عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
+local Teext =[[
+اتبع الازرار تحت ⇣
+واستمتع للأوامر 🕹️
+[𝐒𝐎𝐔𝐑𝐂𝐄 𝐑𝐈𝐒𝐊](t.me/NIU_C)
+]]
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'Back♠️', callback_data="/tdd"},
+},
+{
+{text = 'اوامر الوضع', callback_data="/help3"},{text = 'اوامر التنزيل والرفع', callback_data="/help4"},
+},
+{
+{text = 'اوامر المطورين', callback_data="/help5"},{text = 'اوامر الأعضاء', callback_data="/help6"},
+},
+{
+{text = 'اوامر التسليه', callback_data="/help7"},
+},
+{
+{text = 'قفل و القفل', callback_data="/help1"},{text = 'تعطيل و تفعيل', callback_data="/help2"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
