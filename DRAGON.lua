@@ -2731,10 +2731,10 @@ keyboard.inline_keyboard = {
 {text = 'العاب متطوره🕹️', callback_data="/soff"},
 },
 {
-{text = 'العاب متطوره 2🕹️', callback_data="/change-phott"},
+{text = 'ممميزات', callback_data="/change-phott"},
 },
 { 
-{text = 'الاوامر🎯', callback_data="/help9"},
+{text = 'الاوامر🎯', callback_data="/help99"},
 },
 {
 {text = '<｟ 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 𝐑𝐢𝐬𝐤 ｠ <', url="t.me/NIU_C"},
@@ -14045,7 +14045,7 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = ' <｟SＯＵＲＣＥ💌｠ <', url="t.me/NIU_C"}},
-{{text = 'Back♠️', callback_data="/add"}},
+{{text = 'Back♠️', callback_data="/tdd"}},
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
